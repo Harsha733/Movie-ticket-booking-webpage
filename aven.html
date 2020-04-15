@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Management System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+	ul{
+		padding-left: 4px;
+		padding-top: 4px;
+	}
+	nav {
+	  float: left;
+	  width: 18%;
+	  height: 360px;
+	  background: #DCDCDC;
+	  padding-left: 20px;
+	  margin-left: 10px;
+	}
+	.navbar {
+	  width: 1530px;
+	  background-color: #555;
+	  overflow: auto;
+	  overflow-x: hidden;
+	  height: 57px;
+	}
+	.navbar a{
+		color: white;
+		font-size: 16px;
+		text-align: center;
+	}
+	.navbar a:hover {
+	  background-color: #000;
+	}
+
+	.navbar a.active {
+	  background-color: #4CAF50;
+	}
+	.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+	}
+	#movies,#timings
+	{
+		font-size: 20px;
+		margin: 10px;
+		padding-left: 5px;
+	}
+	.row{
+		margin-left: 300px;
+	}
+	p{
+		margin-left: 0px;
+	}
+	body{
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	</style>
+</head>
+<body>
+<div class="navbar">
+<ul class="nav navbar-nav navbar-center">
+  <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a> </li>
+  <li><a href="#"><span class="glyphicon glyphicon-book"></span> About</a></li>
+  <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li> 
+  </ul>
+</div>
+<div class="w3-content w3-section" style="max-width:2000px">
+  <img class="mySlides" src="avengers.jpg" style="width:1530px;height:275px;padding-left: 10px;">
+  <img class="mySlides" src="fastandfurious.jfif" style="width:1530px;height:275px;padding-left:10px;">
+  <img class="mySlides" src="invisibleman.jpg" style="width:1530px;height:275px;padding-left: 10px;">
+  <img class="mySlides" src="batman.jpg" style="width:1530px;height:275px;padding-left: 10px;">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+</script>
+<nav>
+    <ul>
+    <form action="redirect.html">
+      <select id="movies" required>
+		  <option value="">Cinemas</option>
+		  <option value="Avengers">Avengers End Game</option>
+		  <option value="fandf">Fast and Furious</option>
+		  <option value="invisibleman">Invisible Man</option>
+		  <option value="batman">Batman</option>
+		</select>
+		<select id="timings" required>
+			<option value="">Timings</option>
+			<option value="first">11.30AM to 02.00PM</option>
+			<option value="second">02.30PM to 05.00PM</option>
+			<option value="first">06.30PM to 09.00PM</option>
+			<option value="first">09.30PM to 12.00AM</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<!-- <button onclick="textdisplay()" style="margin-left:80px;" type="button">Submit</button> -->
+		<input type="submit" value="Submit" style="margin-left: 80px;">  
+		</form>
+    </ul>
+  </nav>  
+  <div class="row">
+  	<div class="column">
+  		<br>
+  		<a href="aven.html">
+  		<img src="avengers_link.jfif" alt="Avengers" hspace="50" style="width:170px; height:170px; padding-left: 10px;padding-top: 10px;">
+  		</a>
+  		<a href="fandf.html">
+  		<img src="fandf_link.jfif" alt="Fast and Furious" hspace="70" style="width: 170px;height: 170px; padding-left: 10px; padding-top: 10px;">
+  		</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  		<a href="batman.html">
+  		<img src="batman_link.jfif" alt="Batman" hspace="20" style="width: 170px;height: 170px; padding-left: 10px; padding-top: 10px;">
+  		</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  		<a href="invisibleman.html">
+  		<img src="invisibleman_link.jfif" alt="The Invisible Man" hspace="70"style="width: 170px;height: 170px; padding-left: 10px; padding-top: 10px;">
+  		</a>
+  		<br>
+  		<br>
+  		<p>Avengers Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.<br> It is the sequel to the 2012's "The Avengers", 2015's "Avengers:Age of Ultron, and 2018's "Avengers:Infinity War", and the twenty-second film in the Marvel Cinematic Universe. It was directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, and features and ensemble cast including Robert Downey Jr, Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira, Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow and Josh Brolin. In the film, the <br>surviving members of the Avengers and their allies attempt to reverse the damage caused by Thanos in Infinity War.</p>
+
+</div>
+</body>
+</html>
